@@ -1,0 +1,5 @@
+Proceso sin_titulo
+    si !2>1 y no 2<3 Entonces
+        Escribir 2;
+    FinSi
+FinProceso

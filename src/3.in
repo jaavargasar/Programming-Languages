@@ -1,0 +1,12 @@
+Algoritmo sin_titulo
+    10
+    12.31221
+    "esto es una cadena"
+    'esto tambien' 
+    
+    //Estas lineas se ignoran
+    //pero se cuentan las lineas
+    
+    'e'
+    112 - 122 * 3
+FinAlgoritmo

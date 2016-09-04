@@ -1,0 +1,6 @@
+algoritmo mi_algoritmo
+    Definir a como Entero
+    a
+    Definir B como real
+    b
+FinProceso

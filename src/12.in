@@ -1,0 +1,10 @@
+Proceso sin_titulo
+    Definir a Como Real;
+    Dimension a[3,1,2];
+
+    //primer valo
+    Escribir a[0,0,0];
+
+    //ultimo valor
+    Escribir a[2,0,1];
+FinProceso

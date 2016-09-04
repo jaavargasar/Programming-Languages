@@ -1,0 +1,10 @@
+Proceso mi_proceso
+    Definir b Como Real;
+    Definir c Como Real;
+    
+    c $ 12;
+    
+    b <- (3*212 - c*323/21 ) / (21 - 2);
+    
+    Escribir b;    
+FinProceso

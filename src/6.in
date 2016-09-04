@@ -1,0 +1,16 @@
+//Es un comentario
+Proceso mi_proceso
+    Definir n Como Numerico;
+    Definir i Como Entero;
+    DEFINIR c COMO CARACTER;
+    Definir r Como Real;
+    Definir b Como Logico;
+
+    n <- 1;
+    i <- 10;
+    c <- 'hola';
+    r <- 3.141212;
+    b <- Verdadero;
+    
+    Escribir N,' ',i,' ',c,' ',r,' ',b;
+FinProceso
