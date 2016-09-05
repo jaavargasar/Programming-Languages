@@ -32,10 +32,12 @@ public class Lexi {
 	public static Lexi.Token token = st.new Token();
 	
 	public static String ass;
+	public static boolean end_line=false;
 	public static int row=0;   //row
 	public static int col=1;   //col
 	public static Set<String> mySet =new HashSet<>();  //table
 	public static Set<Integer> myCheck = new HashSet<>(); //check left states
+        public static Set<Character> sim = new HashSet<>(); // next to integers
 	static{   //load Reserved words
 		mySet.add("proceso");  mySet.add("entero"); mySet.add("definir"); mySet.add("real"); mySet.add("mientras");
 		mySet.add("finsi");mySet.add("finproceso"); mySet.add("escribir");mySet.add("entonces");mySet.add("si");
@@ -49,6 +51,13 @@ public class Lexi {
 		mySet.add("esperar");mySet.add("segundos");mySet.add("milisegundos");mySet.add("de");mySet.add("otro");
 		mySet.add("modo");mySet.add("borrar");mySet.add("tecla");mySet.add("esperar");
 		
+        sim.add('=');sim.add('<');sim.add('>');sim.add('+');sim.add('-');sim.add('/');
+        sim.add('*');sim.add('%');sim.add(';');sim.add('(');sim.add(')');sim.add('[');sim.add(']');
+        sim.add('|');sim.add('&');sim.add('^');sim.add(' ');
+        
+       // sim.add('y');sim.add('o');sim.add('n');sim.add('m');      
+        //add y,no,mod,o
+                
 		myCheck.add(8);myCheck.add(19);myCheck.add(16);myCheck.add(5); myCheck.add(36);
 	}
 	
@@ -128,13 +137,19 @@ public class Lexi {
 			case 6:
 				if(c>=48 && c<=57) return 6;
 				else if(c=='.') return 7;
-				else return 8;
+                else{
+                	if(sim.contains(c) || end_line ) return 8;
+                	else return -3;
+                	}
 			//<-- end token_entero -->	
 			
 			// <--begin token_real -- >
 			case 7:
 				if(c>=48 && c<=57) return 7;
-				else return 9;
+				else{
+					if(sim.contains(c) || end_line ) return 9;
+					else return -3;
+				}
 			// <-- end token_real -->
 			
 			case 8: 
@@ -341,6 +356,7 @@ public class Lexi {
 		    	if(seen) continue;  //ignore comments
 		    	if(checkout) break; //break if found a error
 		    	
+		    	end_line=true;
 		    	aux_state=solve_dt(aux_state,'$',str.toString(),row+2-str.length() );
 		    	//System.out.println(aux_state);
 		    	//System.out.println(str.toString());
@@ -351,6 +367,7 @@ public class Lexi {
 		    	
 		    	
 		    	//System.out.println("NEW LINE");
+		    	end_line=false;
 		    	col++;
 		    }
 		    
