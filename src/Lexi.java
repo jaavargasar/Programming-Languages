@@ -39,9 +39,15 @@ public class Lexi {
 	static{   //load Reserved words
 		mySet.add("proceso");  mySet.add("entero"); mySet.add("definir"); mySet.add("real"); mySet.add("mientras");
 		mySet.add("finsi");mySet.add("finproceso"); mySet.add("escribir");mySet.add("entonces");mySet.add("si");
-		mySet.add("verdadero");mySet.add("falso");mySet.add("y");mySet.add("o");mySet.add("mod");mySet.add("no");mySet.add("como");mySet.add("logico");
+		mySet.add("verdadero");mySet.add("falso");mySet.add("y");mySet.add("o");mySet.add("mod");mySet.add("no");mySet.add("como");
+		mySet.add("logico");
 		mySet.add("real");mySet.add("caracter");mySet.add("numerico");mySet.add("mientras");mySet.add("hacer");mySet.add("finmientras");
 		mySet.add("algoritmo");mySet.add("finalgoritmo");mySet.add("dimension");mySet.add("leer");
+		
+		mySet.add("texto"); mySet.add("subproceso");mySet.add("segun");mySet.add("finsegun");mySet.add("repetir");mySet.add("hasta");
+		mySet.add("que");mySet.add("con");mySet.add("para");mySet.add("paso");mySet.add("hacer");mySet.add("finpara");
+		mySet.add("esperar");mySet.add("segundos");mySet.add("milisegundos");mySet.add("de");mySet.add("otro");
+		mySet.add("modo");mySet.add("borrar");mySet.add("tecla");mySet.add("esperar");
 		
 		myCheck.add(8);myCheck.add(19);myCheck.add(16);myCheck.add(5); myCheck.add(36);
 	}

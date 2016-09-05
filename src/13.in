@@ -1,0 +1,9 @@
+Proceso 
+    entero 
+    Definir reAl 
+    MienTras 
+    finsi
+    borrar tecla
+	dimension[1,2,3];
+ 
+FinProceso
