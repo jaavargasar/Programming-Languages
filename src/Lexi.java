@@ -33,6 +33,7 @@ public class Lexi {
 	
 	public static String ass;
 	public static boolean end_line=false;
+	public static boolean findn=false;
 	public static int row=0;   //row
 	public static int col=1;   //col
 	public static Set<String> mySet =new HashSet<>();  //table
@@ -145,9 +146,15 @@ public class Lexi {
 			
 			// <--begin token_real -- >
 			case 7:
-				if(c>=48 && c<=57) return 7;
+				if(c>=48 && c<=57){
+					findn=true;
+					return 7;
+				}
 				else{
-					if(sim.contains(c) || end_line ) return 9;
+					if((sim.contains(c) || end_line) && findn ){
+						findn=false;
+						return 9;
+					}
 					else return -3;
 				}
 			// <-- end token_real -->
