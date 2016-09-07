@@ -54,12 +54,12 @@ public class Lexi {
 		
         sim.add('=');sim.add('<');sim.add('>');sim.add('+');sim.add('-');sim.add('/');
         sim.add('*');sim.add('%');sim.add(';');sim.add('(');sim.add(')');sim.add('[');sim.add(']');
-        sim.add('|');sim.add('&');sim.add('^');sim.add(' ');
+        sim.add('|');sim.add('&');sim.add('^');sim.add(' ');sim.add('"');sim.add('\'');
         
        // sim.add('y');sim.add('o');sim.add('n');sim.add('m');      
         //add y,no,mod,o
                 
-		myCheck.add(8);myCheck.add(19);myCheck.add(16);myCheck.add(5); myCheck.add(36);
+		myCheck.add(8);myCheck.add(19);myCheck.add(16);myCheck.add(5); myCheck.add(36);myCheck.add(9);
 	}
 	
 
