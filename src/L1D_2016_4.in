@@ -1,0 +1,27 @@
+
+Algoritmo sin_titulo
+    Definir c,x Como Entero;
+    
+    Escribir "Intenta adivinar el numero entre 1 y 10";
+    c <- 3;
+    
+    Repetir
+        Leer x;
+    Hasta Que x=c;
+    
+    Escribir "Bien hecho!";
+FinAlgoritmo
+
+
+Algoritmo sin_titulo
+    Definir c,x Como Entero;
+    
+    Escribir "Intenta adivinar el numero entre 1 y 10";
+    c <- 3;
+    
+    Repetir
+        Leer x;
+    Hasta Que x=c;
+    
+    Escribir "Bien hecho!";
+FinAlgoritmo

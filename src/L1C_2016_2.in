@@ -1,0 +1,10 @@
+Proceso mi_proceso
+    //1. Definir el identificador del arreglo y su tipo
+    Definir arreglo como numero;
+    
+    //2.Definir las dimensiones
+    Dimension arreglo[100,100];
+    
+    arreglo[0,0] <- 23.2112*212;
+    Escribir arreglo[0,0];
+FinProceso

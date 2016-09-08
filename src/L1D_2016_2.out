@@ -1,0 +1,169 @@
+<proceso,1,1>
+<id,mi_proceso,1,9>
+<definir,3,5>
+<id,a,3,13>
+<como,3,15>
+<entero,3,20>
+<token_pyc,3,26>
+<leer,4,5>
+<id,a,4,10>
+<token_pyc,4,11>
+<definir,6,5>
+<id,c,6,13>
+<como,6,15>
+<entero,6,20>
+<token_pyc,6,26>
+<id,c,7,5>
+<token_asig,7,7>
+<token_entero,12,7,10>
+<token_mul,7,12>
+<token_entero,3,7,13>
+<token_pyc,7,14>
+<segun,9,5>
+<id,a,9,11>
+<hacer,9,13>
+<id,c,10,9>
+<token_dosp,10,10>
+<escribir,11,13>
+<token_cadena,Treinta y seis,11,22>
+<token_pyc,11,38>
+<token_entero,2,12,9>
+<token_dosp,12,10>
+<escribir,13,13>
+<token_cadena,Dos,13,22>
+<token_pyc,13,27>
+<token_entero,48,14,9>
+<token_div,14,11>
+<token_entero,6,14,12>
+<token_dosp,14,13>
+<escribir,15,13>
+<token_cadena,Ocho,15,22>
+<token_pyc,15,28>
+<de,16,9>
+<otro,16,12>
+<modo,16,17>
+<token_dosp,16,21>
+<escribir,17,13>
+<token_cadena,Opcion no valida,17,22>
+<token_pyc,17,40>
+<finsegun,18,5>
+<finproceso,20,1>
+<proceso,24,1>
+<id,sin_titulo,24,9>
+<definir,25,5>
+<id,op,25,13>
+<como,25,16>
+<entero,25,21>
+<token_pyc,25,27>
+<repetir,26,5>
+<limpiar,28,9>
+<pantalla,28,17>
+<token_pyc,28,25>
+<escribir,29,9>
+<token_cadena,Menú de recomendaciones,29,18>
+<token_pyc,29,44>
+<escribir,30,9>
+<token_cadena,   1. Literatura,30,18>
+<token_pyc,30,36>
+<escribir,31,9>
+<token_cadena,   2. Cine,31,18>
+<token_pyc,31,30>
+<escribir,32,9>
+<token_cadena,   3. Música,32,18>
+<token_pyc,32,33>
+<escribir,33,9>
+<token_cadena,   4. Videojuegos,33,18>
+<token_pyc,33,37>
+<escribir,34,9>
+<token_cadena,   5. Salir,34,18>
+<token_pyc,34,31>
+<escribir,36,9>
+<token_cadena,Elija una opción (1-5): ,36,18>
+<token_pyc,36,45>
+<leer,37,9>
+<id,op,37,14>
+<token_pyc,37,16>
+<segun,39,9>
+<id,op,39,15>
+<hacer,39,18>
+<token_entero,1,40,13>
+<token_dosp,40,14>
+<escribir,41,17>
+<token_cadena,Lecturas recomendables:,41,26>
+<token_pyc,41,51>
+<escribir,42,17>
+<token_cadena, + Esperándolo a Tito y otros cuentos de fúbol (Eduardo Sacheri),42,26>
+<token_pyc,42,94>
+<escribir,43,17>
+<token_cadena, + El juego de Ender (Orson Scott Card),43,26>
+<token_pyc,43,67>
+<escribir,44,17>
+<token_cadena, + El sueño de los héroes (Adolfo Bioy Casares),44,26>
+<token_pyc,44,77>
+<token_entero,2,45,13>
+<token_dosp,45,14>
+<escribir,46,17>
+<token_cadena,Películas recomendables:,46,26>
+<token_pyc,46,53>
+<escribir,47,17>
+<token_cadena, + Matrix (1999),47,26>
+<token_pyc,47,44>
+<escribir,48,17>
+<token_cadena, + El último samuray (2003),48,26>
+<token_pyc,48,56>
+<escribir,49,17>
+<token_cadena, + Cars (2006),49,26>
+<token_pyc,49,42>
+<token_entero,3,50,13>
+<token_dosp,50,14>
+<escribir,51,17>
+<token_cadena,Discos recomendables:,51,26>
+<token_pyc,51,49>
+<escribir,52,17>
+<token_cadena, + Despedazado por mil partes (La Renga, 1996),52,26>
+<token_pyc,52,74>
+<escribir,53,17>
+<token_cadena, + Búfalo (La Mississippi, 2008),53,26>
+<token_pyc,53,61>
+<escribir,54,17>
+<token_cadena, + Gaia (Mägo de Oz, 2003),54,26>
+<token_pyc,54,55>
+<token_entero,4,55,13>
+<token_dosp,55,14>
+<escribir,56,17>
+<token_cadena,Videojuegos clásicos recomendables,56,26>
+<token_pyc,56,63>
+<escribir,57,17>
+<token_cadena, + Día del tentáculo (LucasArts, 1993),57,26>
+<token_pyc,57,68>
+<escribir,58,17>
+<token_cadena, + Terminal Velocity (Terminal Reality/3D Realms, 1995),58,26>
+<token_pyc,58,83>
+<escribir,59,17>
+<token_cadena, + Death Rally (Remedy/Apogee, 1996),59,26>
+<token_pyc,59,64>
+<token_entero,5,60,13>
+<token_dosp,60,14>
+<escribir,61,17>
+<token_cadena,Gracias, vuelva prontos,61,26>
+<token_pyc,61,51>
+<de,62,13>
+<otro,62,16>
+<modo,62,21>
+<token_dosp,62,25>
+<escribir,63,17>
+<token_cadena,Opción no válida,63,26>
+<token_pyc,63,46>
+<finsegun,64,9>
+<escribir,65,9>
+<token_cadena,Presione enter para continuar,65,18>
+<token_pyc,65,49>
+<esperar,66,9>
+<tecla,66,17>
+<token_pyc,66,22>
+<hasta,67,5>
+<id,que,67,11>
+<id,op,67,15>
+<token_igual,67,17>
+<token_entero,5,67,18>
+<finproceso,68,1>

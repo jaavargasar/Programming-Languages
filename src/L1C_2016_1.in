@@ -1,0 +1,10 @@
+proceso miProceso
+    Definir a,b,c,d,e,f,g,h,i,j,k como Real;
+    Escribir a,b,c,d,e;
+    a <- b*c-2*d;
+    d <- a*3-4*c;
+    Leer a,b,c,e,g;
+    a b c d e f g h i j
+    a;b;c;d;e;g
+    e+b+c+e+d+a+s+a+;
+finproceso

@@ -1,0 +1,28 @@
+SubProceso z <- f ( x )
+    Definir z Como Real;
+    z <- x^4 - 11*x^2 + x - 100;
+FinSubProceso
+
+Proceso bolzano
+    
+    Definir izq,der,med,eps Como Real;
+    
+    izq <- -100;
+    der <- 0;
+    eps <- 0.00000001;
+    
+    Mientras der-izq > eps hacer
+        
+        med <- (izq+der)/2;
+        
+        si f(med)*f(der) < 0 Entonces
+            izq <- med;
+        Sino
+            der <- med;
+        FinSi
+        
+    FinMientras
+    
+    Escribir "Una raiz de la funcion está en: ",med;
+    
+FinProceso

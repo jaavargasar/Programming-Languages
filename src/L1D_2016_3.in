@@ -1,0 +1,175 @@
+// Juego simple que pide al usuario que adivine un numero en 10 intentos
+
+Proceso Adivina_Numero
+
+    Definir intentos,num_secreto,num_ingresado Como Entero;
+    intentos<-10;
+    num_secreto <- azar(100)+1;
+    
+    Escribir "Adivine el numero (de 1 a 100):";
+    Leer num_ingresado;
+    Mientras num_secreto<>num_ingresado Y intentos>1 Hacer
+        Si num_secreto>num_ingresado Entonces
+            Escribir "Muy bajo";
+        Sino 
+            Escribir "Muy alto";
+        FinSi
+        intentos <- intentos-1;
+        Escribir "Le quedan ",intentos," intentos:";
+        Leer num_ingresado;
+    FinMientras
+    
+    Si num_secreto=num_ingresado Entonces
+        Escribir "Exacto! Usted adivino en ",11-intentos," intentos.";
+    Sino
+        Escribir "El numero era: ",num_secreto;
+    FinSi
+    
+FinProceso
+
+// Calcula el promedio de una lista de N datos
+
+Proceso Promedio
+
+    Definir i,N como Entero;
+    Definir acum,dato,prom como Reales;
+    Escribir "Ingrese la cantidad de datos:";
+    Leer n;
+    
+    acum<-0;
+    
+    Para i<-1 Hasta n Hacer
+        Escribir "Ingrese el dato ",i,":";
+        Leer dato;
+        acum<-acum+dato;
+    FinPara
+    
+    prom<-acum/n;
+    
+    Escribir "El promedio es: ",prom;
+    
+FinProceso
+
+// este es el ejemplo más simple de esta ayuda, 
+// toma dos numeros, los suma y muestra el resultado
+
+Proceso Suma
+
+    Definir A,B,C como Reales;
+
+    // para cargar un dato, se le muestra un mensaje al usuario
+    // con la instrucción Escribir, y luego se lee el dato en 
+    // una variable (A para el primero, B para el segundo) con 
+    // la instrucción Leer
+
+    Escribir "Ingrese el primer numero:";
+    Leer A;
+
+    Escribir "Ingrese el segundo numero:";
+    Leer B;
+
+
+    // ahora se calcula la suma y se guarda el resultado en la
+    // variable C mediante la asignación (<-)
+    
+    C <- A+B;
+
+
+    // finalmente, se muestra el resultado, precedido de un 
+    // mensaje para avisar al usuario, todo en una sola
+    // instrucción Escribir
+    
+    Escribir "El resultado es: ",C;
+
+FinProceso
+
+//    Lee los tres lados de un triangulo rectangulo, determina 
+// si corresponden (por Pitargoras) y en caso afirmativo 
+// calcula el area
+
+Proceso TrianguloRectangulo
+    
+
+    // cargar datos
+    Definir l1,l2,l3 Como Real;
+    Escribir "Ingrese el lado 1:";
+    Leer l1;
+    Escribir "Ingrese el lado 2:";
+    Leer l2;
+    Escribir "Ingrese el lado 3:";
+    Leer l3;
+    
+    // encontrar la hipotenusa (mayor lado)
+    Definir cat1,cat2,hip Como Real;
+    Si l1>l2 Entonces
+        cat1<-l2;
+        Si l1>l3 Entonces
+            hip<-l1;
+            cat2<-l3;
+        Sino
+            hip<-l3;
+            cat2<-l1;
+        FinSi
+    Sino
+        cat1<-l1;
+        Si l2>l3 Entonces
+            hip<-l2;
+            cat2<-l3;
+        Sino
+            hip<-l3;
+            cat2<-l2;
+        FinSi
+    FinSi
+    
+    // ver si cumple con Pitagoras
+    Si hip^2 = cat1^2 + cat2^2 Entonces
+        // calcualar area
+        Definir area como real;
+        area<-(cat1*cat2)/2;
+        Escribir "El area es: ",area;
+    Sino
+        Escribir "No es un triangulo rectangulo.";
+    FinSi
+    
+FinProceso
+
+Proceso Modulo
+    Definir N,M Como Enteros;
+    Escribir "Ingrese el numero: ";
+    Leer N;
+    Escribir "Ingrese el divisor: ";
+    Leer M;
+    Si N MOD M = 0 Entonces
+        Escribir M," es divisor exacto de ",N,".";
+    Sino
+        Escribir "El resto de dividir ",N," por ",M," es: ",N MOD M;
+    FinSi
+FinProceso
+
+// Separa un numero entero en sus digitos
+
+Proceso Digitos
+    
+    Definir i,digito,pot,n,aux,cont Como Enteros;
+    Escribir "Ingrese un numero entero postivo:";
+    Leer n;
+    
+    // primero, contar cuantos digitos
+    cont <- 0; 
+    aux <- n;
+    Mientras aux>0 hacer // mientras no sea cero
+        cont <- cont + 1; // contar cuantos digitos
+        aux <- trunc(aux/10); // dividir por 10 y despreciar los de
+    FinMientras
+    Escribir "El numero tiene ",cont," digitos";
+    
+    // luego, mostrarlos uno por uno 
+    aux<-n;
+    Para i<-1 hasta cont Hacer
+        pot <- 10^(cont-i); // por cuanto hay que dividir para obtener el primer digito
+        digito <- trunc (aux / pot); // obtener el digito
+        aux <- aux - digito*pot; // quitar ese digito al numero
+        Escribir "El digito ",i," es ",digito;
+    FinPara
+    
+FinProceso

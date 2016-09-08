@@ -1,0 +1,27 @@
+Proceso sin_titulo
+	Definir i,j Como Entero;
+	Definir esPrimo Como Logico;
+	Para i<-0 Hasta 10 Con Paso 1 Hacer
+		si i mod 2 = 1 Entonces
+			Escribir i," ES IMPAR";
+		sino 
+			Escribir i," ES PAR";
+		FinSi
+	FinPara
+	
+	Para i<-2 Hasta 100 Con Paso 1 Hacer
+		esPrimo <- Verdadero;
+		j<-2;
+		Mientras j*j<=i Hacer
+			si i mod j = 0 Entonces
+				esPrimo <- falso;
+			FinSi
+			j <- j+1;
+		FinMientras
+		
+		si esPrimo Entonces
+			Escribir i," ES PRIMO";
+		FinSi
+	FinPara
+	
+FinProceso

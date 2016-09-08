@@ -1,0 +1,11 @@
+<token_cadena,esta cadena deberia ser aceptada,1,6>
+<token_cadena,al igual que esta:,2,7>
+<token_cadena,manana vamos a pasar el ano nuevo en casa DE nuEstra abuela maria,3,8>
+<token_cadena,Cadenas con comas, tambien deberian ser aceptadas,4,9>
+<token_cadena,Estamos por ahora solo en analisis lexico,5,10>
+<token_cadena,{+{}][[[][...,.,##$%&//()==¡¿¿¿****+¿2332¿¿,6,11>
+<token_cadena,|||||____::::,,.,,..ll,l<<<>>>>~~~~+,7,1>
+<token_cadena,1221212221*12212-22323%&$%&$%&$%&$%%&$%&/()==)(/(/&%$*[]***[[_:;;:]])),8,1>
+<token_cadena,Esta cadena NO es un error lexico ,9,1>
+<token_entero,2,9,37>
+<token_cadena, ,9,38>

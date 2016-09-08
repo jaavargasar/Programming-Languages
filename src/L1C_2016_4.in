@@ -1,0 +1,14 @@
+Proceso mi_algoritmo
+    Definir a Como Entero;
+    a <--101;
+    
+    Definir b Como Logico;
+    
+    b <- a < -100;
+    a<--a;
+    b <- a< -a;
+    
+    Escribir b;
+    Escribir a;
+FinProceso
+    

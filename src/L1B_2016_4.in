@@ -1,0 +1,21 @@
+//Estos comentarios
+
+
+
+//Y lineas en blanco
+
+
+//Deben ser totalmente
+
+
+
+//Ignorados
+
+
+//Simplemente contamos saltos de lineas
+
+
+
+proceso mi_proceso
+    Escribir "Pudiste pasar la prueba de los comentarios?"
+finproceso

@@ -1,0 +1,7 @@
+esto es un caso de prueba para probar 
+la formacion            de los identificadores en el analizador
+puede que en las palabras anteriores hayan palabras reservadas, ello no interesa o 
+inlcusive tokens
+
+esto_es_un_identificador_valido
+aunque-esto-no-es-un-identificador-si-es-correcto-lexicamente

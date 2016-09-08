@@ -1,0 +1,9 @@
+     "esta cadena deberia ser aceptada"
+      "al igual que esta:"
+       "manana vamos a pasar el ano nuevo en casa DE nuEstra abuela maria'
+        'Cadenas con comas, tambien deberian ser aceptadas"
+         "Estamos por ahora solo en analisis lexico'
+          "{+{}][[[][...,.,##$%&//()==¡¿¿¿****+¿2332¿¿"
+"|||||____::::,,.,,..ll,l<<<>>>>~~~~+"
+'1221212221*12212-22323%&$%&$%&$%&$%%&$%&/()==)(/(/&%$*[]***[[_:;;:]]))'
+"Esta cadena NO es un error lexico "2" "

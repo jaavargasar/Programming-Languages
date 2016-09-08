@@ -1,0 +1,10 @@
+//Ejemplo basico
+Proceso mi_proceso
+    Definir n Como Entero;
+    n <- 100;
+    
+    Mientras n>0 Hacer
+        Escribir n;
+        n <- n-1;
+    FinMientras
+FinProceso

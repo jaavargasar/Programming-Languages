@@ -1,0 +1,36 @@
+<proceso,4,1>
+<id,suma,4,9>
+<definir,6,5>
+<id,a,6,13>
+<token_coma,6,14>
+<id,b,6,15>
+<token_coma,6,16>
+<id,c,6,17>
+<como,6,19>
+<id,reales,6,24>
+<token_pyc,6,30>
+<escribir,13,5>
+<token_cadena,Ingrese el primer numero:,13,14>
+<token_pyc,13,41>
+<leer,14,5>
+<id,a,14,10>
+<token_pyc,14,11>
+<escribir,16,5>
+<token_cadena,Ingrese el segundo numero:,16,14>
+<token_pyc,16,42>
+<leer,17,5>
+<id,b,17,10>
+<token_pyc,17,11>
+<id,c,23,5>
+<token_asig,23,7>
+<id,a,23,10>
+<token_mas,23,11>
+<id,b,23,12>
+<token_pyc,23,13>
+<escribir,30,5>
+<token_cadena,El resultado es: ,30,14>
+<token_coma,30,33>
+<id,c,30,34>
+<token_pyc,30,35>
+<finproceso,32,1>
+>>> Error lexico (linea: 36, posicion: 1)

@@ -36,6 +36,8 @@ public class Lexi {
 	public static boolean findn=false;
 	public static int row=0;   //row
 	public static int col=1;   //col
+	public static int pos_pos;
+	public static boolean end_com;
 	public static Set<String> mySet =new HashSet<>();  //table
 	public static Set<Integer> myCheck = new HashSet<>(); //check left states
         public static Set<Character> sim = new HashSet<>(); // next to integers
@@ -45,16 +47,18 @@ public class Lexi {
 		mySet.add("verdadero");mySet.add("falso");mySet.add("y");mySet.add("o");mySet.add("mod");mySet.add("no");mySet.add("como");
 		mySet.add("logico");
 		mySet.add("real");mySet.add("caracter");mySet.add("numerico");mySet.add("mientras");mySet.add("hacer");mySet.add("finmientras");
-		mySet.add("algoritmo");mySet.add("finalgoritmo");mySet.add("dimension");mySet.add("leer");
+		mySet.add("algoritmo");mySet.add("finalgoritmo");mySet.add("dimension");mySet.add("leer");mySet.add("limpiar");
+		mySet.add("cadena");mySet.add("finfuncion");mySet.add("finsubproceso");mySet.add("pantalla");mySet.add("sino");
+		mySet.add("funcion");mySet.add("numero");
 		
 		mySet.add("texto"); mySet.add("subproceso");mySet.add("segun");mySet.add("finsegun");mySet.add("repetir");mySet.add("hasta");
 		mySet.add("que");mySet.add("con");mySet.add("para");mySet.add("paso");mySet.add("hacer");mySet.add("finpara");
 		mySet.add("esperar");mySet.add("segundos");mySet.add("milisegundos");mySet.add("de");mySet.add("otro");
-		mySet.add("modo");mySet.add("borrar");mySet.add("tecla");mySet.add("esperar");
+		mySet.add("modo");mySet.add("borrar");mySet.add("tecla");mySet.add("esperar");mySet.add("que");
 		
         sim.add('=');sim.add('<');sim.add('>');sim.add('+');sim.add('-');sim.add('/');
         sim.add('*');sim.add('%');sim.add(';');sim.add('(');sim.add(')');sim.add('[');sim.add(']');
-        sim.add('|');sim.add('&');sim.add('^');sim.add(' ');sim.add('"');sim.add('\'');
+        sim.add('|');sim.add('&');sim.add('^');sim.add(' ');sim.add('"');sim.add('\'');sim.add(',');
         
        // sim.add('y');sim.add('o');sim.add('n');sim.add('m');      
         //add y,no,mod,o
@@ -94,6 +98,7 @@ public class Lexi {
 				else if(c==38) return 32; // &
 				else if(c==44) return 33; // ,
 				else if(c==94) return 34; // ^
+				else if(c=='.') return -3;
 				
 				break;
 				
@@ -155,7 +160,7 @@ public class Lexi {
 						findn=false;
 						return 9;
 					}
-					else return -3;
+					else return 37;
 				}
 			// <-- end token_real -->
 			
@@ -168,6 +173,10 @@ public class Lexi {
 				System.out.println(token.toString(false));
 				return -1; //accept real
 			
+			case 37:
+				token.setToken("token_entero",chain.substring(0,chain.length()-1),col,r);
+				System.out.println(token.toString(false));
+				return -1;  // accept entero
 			
 			case 10: 
 				token.setToken("token_neg",col,r);
@@ -279,7 +288,7 @@ public class Lexi {
 				return -1; //accept token_,
 			case 34:
 				token.setToken("token_pot",col,r);
-				System.out.println(token.toString(false));
+				System.out.println(token.toString(true));
 				return -1; //accept token_^
 				
 			case 35:
@@ -323,6 +332,7 @@ public class Lexi {
 		    	boolean seen=false;
 		    	boolean checkout=false;
 		    	str=new StringBuilder();
+		    	end_com=false;
 		    	for(int i=0;i<line.length();i++){
 		    		
 		    		str.append(line.charAt(i));
@@ -334,7 +344,10 @@ public class Lexi {
 		    		}
 		    		row=i;
 		    		//System.out.println("line "+line.charAt(i)+" "+aux_state+" "+str.toString()); 
-		    		
+		    		if(line.charAt(i)=='"' || line.charAt(i)=='\''){
+		    			end_com=!end_com;
+		    			pos_pos=i;
+		    		}
 		    		int know=check(aux_state,line.charAt(i),str.substring(0,str.length()-1 ),i+2-str.length() );
 		    		
 		    		//identify something before de blank line
@@ -342,6 +355,7 @@ public class Lexi {
 		    			//System.out.println(str.toString());
 		    			//System.out.println("cacho adentro");
 		    			if( myCheck.contains(aux_state)){ i--;}
+		    			if( aux_state==37){i=i-2;}
 		    			aux_state=1;
 		    			str=new StringBuilder();
 		    		}
@@ -361,6 +375,11 @@ public class Lexi {
 		    	}
 		    	
 		    	if(seen) continue;  //ignore comments
+		    	if(end_com){
+		    		System.out.println(">>> Error lexico (linea: "+col+", posicion: "+(pos_pos+1)+")");
+	    			checkout=true;
+		    	}
+		    	
 		    	if(checkout) break; //break if found a error
 		    	
 		    	end_line=true;

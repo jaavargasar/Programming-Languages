@@ -1,0 +1,20 @@
+<token_cadena,hola,1,1>
+<token_dif,1,8>
+<token_cadena,hello,1,11>
+<token_cadena,hol,2,1>
+<token_cadena,ho,3,1>
+<token_cadena,h,4,1>
+<token_cadena,,5,1>
+<entero,6,1>
+<token_y,7,1>
+<token_y,7,3>
+<token_o,8,1>
+<token_o,8,3>
+<token_neg,9,1>
+<token_neg,9,4>
+<token_mod,10,1>
+<token_mod,10,5>
+<token_real,233.2,13,1>
+<token_real,1.1212,14,48>
+<token_entero,122,18,30>
+>>> Error lexico (linea: 18, posicion: 33)

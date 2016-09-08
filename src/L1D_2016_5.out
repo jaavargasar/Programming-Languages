@@ -1,0 +1,77 @@
+<subproceso,2,1>
+<id,saludar,2,12>
+<escribir,3,5>
+<token_cadena,Hola mundo!,3,14>
+<token_pyc,3,27>
+<finsubproceso,4,1>
+<subproceso,7,1>
+<id,res,7,12>
+<token_asig,7,16>
+<id,calculardoble,7,19>
+<token_par_izq,7,32>
+<id,num,7,33>
+<token_par_der,7,36>
+<definir,8,5>
+<id,res,8,13>
+<como,8,17>
+<real,8,22>
+<token_pyc,8,26>
+<id,res,9,5>
+<token_asig,9,9>
+<id,num,9,12>
+<token_mul,9,15>
+<token_entero,2,9,16>
+<token_pyc,9,17>
+<finsubproceso,10,1>
+<proceso,13,1>
+<id,pruebafunciones,13,9>
+<definir,15,5>
+<id,x,15,13>
+<como,15,15>
+<real,15,20>
+<token_pyc,15,24>
+<escribir,17,5>
+<token_cadena,Llamada a la funcion Saludar:,17,14>
+<token_pyc,17,45>
+<id,saludar,18,5>
+<token_pyc,18,12>
+<escribir,20,5>
+<token_cadena,Ingrese un valor numérico para x:,20,14>
+<token_pyc,20,50>
+<leer,21,5>
+<id,x,21,10>
+<token_pyc,21,11>
+<escribir,23,5>
+<token_cadena,Llamada a la función CalcularDoble (pasaje por valor),23,14>
+<token_pyc,23,70>
+<escribir,24,5>
+<token_cadena,El doble de ,24,14>
+<token_coma,24,28>
+<id,x,24,29>
+<token_coma,24,30>
+<token_cadena, es ,24,31>
+<token_coma,24,37>
+<id,calculardoble,24,39>
+<token_par_izq,24,52>
+<id,x,24,53>
+<token_par_der,24,54>
+<token_pyc,24,55>
+<escribir,25,5>
+<token_cadena,El valor original de x es ,25,14>
+<token_coma,25,42>
+<id,x,25,43>
+<token_pyc,25,44>
+<escribir,27,5>
+<token_cadena,Llamada a la función Triplicar (pasaje por referencia),27,14>
+<token_pyc,27,71>
+<id,triplicar,28,5>
+<token_par_izq,28,14>
+<id,x,28,15>
+<token_par_der,28,16>
+<token_pyc,28,17>
+<escribir,29,5>
+<token_cadena,El nuevo valor de x es ,29,14>
+<token_coma,29,39>
+<id,x,29,41>
+<token_pyc,29,42>
+<finproceso,31,1>
